@@ -13,19 +13,12 @@ brew update
 # http://formulae.brew.sh/
 # Or brew list 'package-name'
 
-# Install Bash 4 using homebrew
-brew install bash
-echo /usr/local/bin/bash >> /etc/shells
-chsh -s /usr/local/bin/bash
-echo "BASH_VERSION: ${BASH_VERSION}"
-
 # Development
 brew install php
 # brew install php@7.1
 # brew install php-cs-fixer
 # brew install php-code-sniffer
 brew install composer
-brew install curl
 brew install nvm
 nvm install node
 brew install git
@@ -35,6 +28,7 @@ brew install git-extras
 brew install angular-cli
 
 # Utils
+brew install curl
 brew install wget
 brew install rsync
 brew install coreutils
@@ -60,6 +54,21 @@ brew install grep
 #brew install zsh
 brew install tree
 
+# Install Bash 4 using homebrew
+# brew install bash
+# echo /usr/local/bin/bash >> /etc/shells
+# chsh -s /usr/local/bin/bash
+# echo "BASH_VERSION: ${BASH_VERSION}"
+
+# Install ZSH terminal
+brew install zsh
+sudo -s 'echo /usr/local/bin/zsh >> /etc/shells' && chsh -s /usr/local/bin/zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# Get theme
+# https://github.com/mbadolato/iTerm2-Color-Schemes
+# https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/xfce4terminal/colorschemes/JetBrains%20Darcula.theme
+# TODO: Finish Automated Instalation ZSH themes
+
 ###############################################################################
 # Homebrew Cask                                                               #
 ###############################################################################
@@ -76,9 +85,9 @@ brew cask install google-chrome
 brew cask install firefox
 
 # development
+brew cask install iterm2
 brew cask install docker
 brew cask install phpstorm
-brew cask install iterm2
 brew cask install visual-studio-code
 #brew cask install sublime-text
 brew cask install sourcetree
@@ -99,7 +108,13 @@ brew cask install the-unarchiver
 #brew cask install spotify
 
 ###############################################################################
-# Setup Git                                                                   #
+# Configure Applications                                                                   #
 ###############################################################################
+
+# Git
 git config --global user.name "Ronaldo Meneguite"
 git config --global user.email "ronaldo@fireguard.com.br"
+
+# Generate new RSA Key
+ssh-keygen -t rsa -b 4096 -C "ronaldo@fireguard.com.br" -q -N ""
+ssh-add ~/.ssh/id_rsa
