@@ -51,7 +51,6 @@ brew install gnu-sed --with-default-names
 brew install openssl
 brew install libyaml
 brew install grep
-#brew install zsh
 brew install tree
 
 # Install Bash 4 using homebrew

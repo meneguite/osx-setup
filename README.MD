@@ -3,7 +3,7 @@
 ## Instalation
 git clone https://github.com/meneguite/osx-setup osx-setup
 cd osx-setup
-find . -type f -name ".*" -exec cp -rf '{}' ~/ \;
+cp -rf dotfiles ~/
 
 ### Execute script for install
 ./install.sh
