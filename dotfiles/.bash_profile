@@ -1,10 +1,13 @@
+source ~/.git-prompt.sh
 ###############################################################################
 # Alias                                                                       #
 ###############################################################################
 
 alias projects='cd ~/Projects'
-alias up='docker-compose up -d'
-alias down='docker-compose down'
+alias dkc='cd /Users/ronaldo/Projects/grupocitar/docker'
+alias up='cd /Users/ronaldo/Projects/grupocitar/docker && docker-compose up -d'
+alias down='cd /Users/ronaldo/Projects/grupocitar/docker && docker-compose down'
+alias run='cd /Users/ronaldo/Projects/grupocitar/docker && docker-compose exec php bash'
 alias tests='docker-compose exec php ./vendor/bin/phpunit'
 alias tests-unit='docker-compose exec php ./vendor/bin/phpunit tests/Unit'
 alias tests-feature='docker-compose exec php ./vendor/bin/phpunit tests/Feature'
@@ -12,6 +15,10 @@ alias tests-feature='docker-compose exec php ./vendor/bin/phpunit tests/Feature'
 ###############################################################################
 # Exports                                                                     #
 ###############################################################################
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # Make vim the default editor.
 export EDITOR='vim';
@@ -45,3 +52,4 @@ YELLOW='\[\e[1;33m\]'
 NC='\[\e[0m\]' # No Color
 
 PS1="\n${LIHTGREEN}\\$ \\u@\\h ${YELLOW}[\\w]${LIGHTBLUE}\$(__git_ps1)"$'\n'"${LIHTGREEN}└─> ${NC}"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

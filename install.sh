@@ -90,7 +90,7 @@ brew cask install phpstorm
 brew cask install visual-studio-code
 #brew cask install sublime-text
 brew cask install sourcetree
-brew cask install rdm # Redis Desktop Manager
+#brew cask install rdm # Redis Desktop Manager
 brew cask install postman
 brew cask install mysqlworkbench
 brew cask install sequel-pro
@@ -105,6 +105,8 @@ brew cask install the-unarchiver
 #brew cask install teamviewer
 #brew cask install boxcryptor
 #brew cask install spotify
+brew cask install google-backup-and-sync
+#brew cask install whatsapp
 
 ###############################################################################
 # Configure Applications                                                                   #
