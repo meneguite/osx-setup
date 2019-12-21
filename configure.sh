@@ -47,7 +47,7 @@ sudo nvram SystemAudioVolume=" "
 #defaults write NSGlobalDomain NSScrollAnimationEnabled -bool false
 
 # Increase window resize speed for Cocoa applications
-defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+#defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 # Expand save panel by default
 # defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
@@ -80,7 +80,7 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 
 # Disable the crash reporter
-defaults write com.apple.CrashReporter DialogType -string "none"
+#defaults write com.apple.CrashReporter DialogType -string "none"
 
 # Set Help Viewer windows to non-floating mode
 # defaults write com.apple.helpviewer DevMode -bool true
@@ -271,14 +271,14 @@ sudo find / -name ".DS_Store" -depth -exec rm {} \;
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # Disable disk image verification
-defaults write com.apple.frameworks.diskimages skip-verify -bool true
-defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
-defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
+#defaults write com.apple.frameworks.diskimages skip-verify -bool true
+#defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
+#defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
 
 # Automatically open a new Finder window when a volume is mounted
-defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
-defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
-defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
+#defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
+#defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
+#defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 
 # Show item info near icons on the desktop and in other icon views
 # /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
@@ -305,7 +305,7 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 
 # Use column view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
-defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+#defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
 # Disable the warning before emptying the Trash
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
@@ -320,7 +320,7 @@ defaults write com.apple.finder EmptyTrashSecurely -bool true
 # sudo nvram boot-args="mbasd=1"
 
 # Show the ~/Library folder
-# chflags nohidden ~/Library
+chflags nohidden ~/Library
 
 # Expand the following File Info panes:
 # “General”, “Open with”, and “Sharing & Permissions”
@@ -336,7 +336,7 @@ Privileges -bool true
 # Enable highlight hover effect for the grid view of a stack (Dock)
 # defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
-# Set the icon size of Dock items to 72 pixels
+# Set the icon size of Dock items to 48 pixels
 defaults write com.apple.dock tilesize -int 48
 
 # Change minimize/maximize window effect
@@ -391,7 +391,7 @@ defaults write com.apple.dock show-process-indicators -bool true
 #defaults write com.apple.dock showhidden -bool true
 
 # Make Dock more transparent
-defaults write com.apple.dock hide-mirror -bool true
+#defaults write com.apple.dock hide-mirror -bool true
 
 # Reset Launchpad, but keep the desktop wallpaper intact
 #find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
@@ -527,17 +527,17 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 ###############################################################################
 
 # Show the main window when launching Activity Monitor
-defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
+#defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
 
 # Visualize CPU usage in the Activity Monitor Dock icon
-defaults write com.apple.ActivityMonitor IconType -int 5
+#defaults write com.apple.ActivityMonitor IconType -int 5
 
 # Show all processes in Activity Monitor
-defaults write com.apple.ActivityMonitor ShowCategory -int 0
+#defaults write com.apple.ActivityMonitor ShowCategory -int 0
 
 # Sort Activity Monitor results by CPU usage
-defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
-defaults write com.apple.ActivityMonitor SortDirection -int 0
+#defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
+#defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 ###############################################################################
 # Address Book, Dashboard, iCal, TextEdit, and Disk Utility                   #
@@ -598,7 +598,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 # Move archive files to trash after expansion
 # Delete directly: "/dev/null"
 # Leave alone (default) "."
-defaults write com.apple.archiveutility dearchive-move-after -string "~/.Trash"
+#defaults write com.apple.archiveutility dearchive-move-after -string "~/.Trash"
 
 ###############################################################################
 # Kill affected applications                                                  #
