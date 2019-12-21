@@ -115,6 +115,7 @@ brew cask install appcleaner
 brew cask install libreoffice
 brew cask install zoom
 brew cask install evernote
+brew cask install telegram
 
 ###############################################################################
 # Configure Applications                                                                   #
