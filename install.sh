@@ -98,10 +98,8 @@ brew cask install mysqlworkbench
 brew cask install sequel-pro
 brew cask install sqlitestudio
 brew cask install mongodb-compass
-brew cask install evernote
-brew cask install zoom
 brew cask install robo-3t
-brew cask install libreoffice
+
 
 # other
 brew cask install slack
@@ -113,6 +111,10 @@ brew cask install boxcryptor
 #brew cask install spotify
 brew cask install google-backup-and-sync
 #brew cask install whatsapp
+brew cask install appcleaner
+brew cask install libreoffice
+brew cask install zoom
+brew cask install evernote
 
 ###############################################################################
 # Configure Applications                                                                   #
