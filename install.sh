@@ -35,8 +35,13 @@ echo "BASH_VERSION: ${BASH_VERSION}"
 # brew install php-cs-fixer
 # brew install php-code-sniffer
 #brew install composer
+
 brew install nvm
 nvm install node
+nvm install --lts
+nvm alias default lts/*
+nvm use default
+
 brew install git
 #brew install git-lfs
 brew install git-flow
@@ -92,6 +97,10 @@ brew cask install mysqlworkbench
 brew cask install sequel-pro
 brew cask install sqlitestudio
 brew cask install mongodb-compass
+brew cask install evernote
+brew cask install zoom
+brew cask install robo-3t
+brew cask install libreoffice
 
 # other
 brew cask install slack
