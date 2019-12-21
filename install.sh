@@ -43,6 +43,7 @@ nvm alias default lts/*
 nvm use default
 
 brew install git
+brew install bash-completion
 #brew install git-lfs
 brew install git-flow
 brew install git-extras
