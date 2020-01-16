@@ -30,17 +30,19 @@ echo "BASH_VERSION: ${BASH_VERSION}"
 
 
 # Development
-#brew install php
+# brew install php
 # brew install php@7.1
 # brew install php-cs-fixer
 # brew install php-code-sniffer
-#brew install composer
+# brew install composer
 
 brew install nvm
 nvm install node
 nvm install --lts
 nvm alias default lts/*
 nvm use default
+npm i -g typescript npm-check-updates serverless
+#npm i -g @vue/cli expo-cli
 
 brew install git
 brew install bash-completion
@@ -116,6 +118,17 @@ brew cask install libreoffice
 brew cask install zoom
 brew cask install evernote
 brew cask install telegram
+brew cask install drawio
+brew cask install krita
+
+###############################################################################
+# Install Aws Client                                                                   #
+###############################################################################
+
+cd ~
+curl "https://d1vvhvl2y92vvt.cloudfront.net/awscli-exe-macos.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
 
 ###############################################################################
 # Configure Applications                                                                   #
