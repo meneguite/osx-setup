@@ -15,3 +15,7 @@ cp -rf dotfiles ~/
 ```bash
 ./configure.sh
 ```
+
+### Manual Instalations
+
+Java: https://www.java.com/pt_BR/download/mac_download.jsp
